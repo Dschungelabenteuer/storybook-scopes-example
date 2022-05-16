@@ -1,0 +1,25 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import { Homepage } from '../HomepageB';
+
+<Meta
+  title="Project B (MDX)/Homepage"
+  scopes={['developers-b', 'designers']}
+  component={Homepage}
+/>
+
+export const Template = (args) => <Homepage {...args} />;
+
+# Homepage
+
+<Canvas>
+  <Story name="Primary">
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Designer Only Story" scopes={['designers']}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
